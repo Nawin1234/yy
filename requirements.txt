@@ -1,7 +1,7 @@
 streamlit
 pandas
-numpy
-matplotlib==3.5.3  # Force downgrade for compatibility
+numpy==1.23.5  # Fix NumPy compatibility issue
+matplotlib==3.5.3  # Ensure Matplotlib works correctly
 seaborn
 mlxtend
 scikit-learn
@@ -10,3 +10,4 @@ requests
 joblib
 plotly
 pyarrow
+
