@@ -1,7 +1,7 @@
 streamlit
 pandas
-numpy==1.21.6  # More stable for Matplotlib
-matplotlib==3.4.3  # Ensure compatibility
+numpy  # No specific version to avoid conflicts
+matplotlib
 seaborn
 mlxtend
 scikit-learn
@@ -10,5 +10,6 @@ requests
 joblib
 plotly
 pyarrow
+
 
 
