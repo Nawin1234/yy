@@ -1,7 +1,7 @@
 streamlit
 pandas
 numpy
-matplotlib==3.7.1
+matplotlib==3.5.3  # Force downgrade for compatibility
 seaborn
 mlxtend
 scikit-learn
