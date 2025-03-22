@@ -1,6 +1,6 @@
 streamlit
 pandas
-numpy==1.23.5  # Fix NumPy compatibility issue
+numpy>=1.24.0 # Fix NumPy compatibility issue
 matplotlib==3.5.3  # Ensure Matplotlib works correctly
 seaborn
 mlxtend
