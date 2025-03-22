@@ -1,4 +1,8 @@
 import streamlit as st
+
+# ✅ Fix: Set page config at the very top
+st.set_page_config(page_title="🚚 Amazon Market Basket & Delivery Analysis", page_icon="📦")
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -7,20 +11,17 @@ from mlxtend.frequent_patterns import apriori, association_rules
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 import os
-import subprocess
 
 # 🚀 Install missing system dependencies for Streamlit Cloud
 def install_packages():
     try:
+        import subprocess
         subprocess.run(["apt-get", "update"], check=True)
         subprocess.run(["apt-get", "install", "-y", "libglib2.0-0", "libsm6", "libxext6", "libxrender1"], check=True)
     except Exception as e:
         st.error(f"System dependency installation failed: {e}")
 
 install_packages()
-
-# Set page title and icon
-st.set_page_config(page_title="🚚 Amazon Market Basket & Delivery Analysis", page_icon="📦")
 
 # Load the dataset
 @st.cache_data
@@ -52,10 +53,9 @@ if df is None:
     st.stop()
 
 st.title("📦 Amazon Market Basket & Delivery Analysis")
-
-# Show dataset preview
 st.write("### Sample Data")
 st.dataframe(df.head())
+
 
 # Sidebar Filters
 st.sidebar.title("🔍 Filter Options")
